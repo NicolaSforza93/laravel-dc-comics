@@ -40,7 +40,7 @@
             </div>
 
             <div class="mb-3">
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select" name="type" aria-label="Default select example">
                     <option selected>Tipologia</option>
                     <option value="1">Comic Book</option>
                     <option value="2">Graphic Novel</option>
