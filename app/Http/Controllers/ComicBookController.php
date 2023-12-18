@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\ComicBook;
 use App\Http\Requests\StoreComicBookRequest;
 use App\Http\Requests\UpdateComicBookRequest;
+use Illuminate\Http\Request;
 
 class ComicBookController extends Controller
 {
@@ -28,9 +29,10 @@ class ComicBookController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreComicBookRequest $request)
+    public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        dd($data);
     }
 
     /**

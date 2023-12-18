@@ -4,10 +4,11 @@
 
 <section class="p-4">
     <div class="container">
-        <form action="" class="border rounded p-3">
+        <form action="{{ route('comic_books.store') }}" method="POST" class="border rounded p-3">
+            @csrf
             <div class="mb-3">
                 <label class="form-label">Titolo</label>
-                <input type="email" class="form-control" name="title" id="exampleFormControlInput1" placeholder="Titolo">
+                <input type="text" class="form-control" name="title" id="exampleFormControlInput1" placeholder="Titolo">
             </div>
 
             <div class="mb-3">
@@ -39,8 +40,11 @@
             </div>
 
             <div class="mb-3">
-                <label for="basic-url" class="form-label">Tipologia</label>
-                <input type="text" class="form-control" placeholder="Tipo" name="type" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Tipologia</option>
+                    <option value="1">Comic Book</option>
+                    <option value="2">Graphic Novel</option>
+                  </select>
             </div> 
             
             <button type="submit" class="btn btn-primary">Aggiungi</button>

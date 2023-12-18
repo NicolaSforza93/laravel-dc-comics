@@ -28,3 +28,6 @@ Route::get('/comic_books/create', [ComicBookController::class, 'create'])
 
 Route::get('/comic_books/{comic_book}', [ComicBookController::class, 'show'])
     ->name('comic_books.show');
+
+Route::post('/comic_books', [ComicBookController::class, 'store'])
+    ->name('comic_books.store');
