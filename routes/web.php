@@ -20,4 +20,8 @@ Route::get('/', function () {
 
 // CRUD
 
-Route::get('/comic_books', [ComicBookController::class, 'index'])->name('comic_books.index');
+Route::get('/comic_books', [ComicBookController::class, 'index'])
+    ->name('comic_books.index');
+
+Route::get('/comic_books/{comic_book}', [ComicBookController::class, 'show'])
+    ->name('comic_books.show');

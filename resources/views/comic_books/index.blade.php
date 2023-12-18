@@ -10,7 +10,9 @@
                     <div class="card h-100">
                         <img src="{{ $comic_book->thumb }}" class="card-img-top" alt="">
                         <div class="card-body px-0">
-                            <h6 class="text-uppercase text-black">{{ $comic_book->title }}</h6>
+                            <h6 class="text-uppercase text-black">
+                                <a href="{{ route('comic_books.show', $comic_book) }}">{{ $comic_book->title }}</a>
+                            </h6>
                         </div>
                     </div>  
                 </div>
