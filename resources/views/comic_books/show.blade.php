@@ -4,6 +4,7 @@
 
 <section class="show-comic-book py-4 bg-white position-relative">
     <div class="container py-5">
+        <a href="{{ route('comic_books.edit', $comic_book->id) }}"><i class="fa-solid fa-pen-to-square"></i></a>
         <figure class="position-absolute">
             <img src="{{ $comic_book->thumb }}" width="120" alt="">
         </figure>

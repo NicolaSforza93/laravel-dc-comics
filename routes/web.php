@@ -31,3 +31,9 @@ Route::get('/comic_books/{comic_book}', [ComicBookController::class, 'show'])
 
 Route::post('/comic_books', [ComicBookController::class, 'store'])
     ->name('comic_books.store');
+
+Route::get('/comic_books/{comic_book}/edit', [ComicBookController::class, 'edit'])
+    ->name('comic_books.edit');
+
+Route::put('/comic_books/{comic_book}', [ComicBookController::class, 'update'])
+    ->name('comic_books.update');
