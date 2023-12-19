@@ -33,19 +33,21 @@ class ComicBookController extends Controller
     {
         $data = $request->all();
         // dd($data);
-        $new_comic_book = new ComicBook();
+        // $new_comic_book = new ComicBook();
 
-        $new_comic_book->title = $data['title'];
-        $new_comic_book->description = $data['description'];
-        $new_comic_book->thumb = $data['thumb'];
-        $new_comic_book->price = $data['price'];
-        $new_comic_book->series = $data['series'];
-        $new_comic_book->sale_date = $data['sale_date'];
-        $new_comic_book->type = $data['type'];
+        // $new_comic_book->title = $data['title'];
+        // $new_comic_book->description = $data['description'];
+        // $new_comic_book->thumb = $data['thumb'];
+        // $new_comic_book->price = $data['price'];
+        // $new_comic_book->series = $data['series'];
+        // $new_comic_book->sale_date = $data['sale_date'];
+        // $new_comic_book->type = $data['type'];
 
-        $new_comic_book->save();
+        // $new_comic_book->save();
 
-        return redirect()->route('comic_books.show', $new_comic_book->id);
+        $new_comic_book = ComicBook::create($data);
+
+        return redirect()->route('comic_books.index', $new_comic_book->id);
     }
 
     /**
