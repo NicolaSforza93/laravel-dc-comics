@@ -3,8 +3,8 @@
 @section('content')
 
 <section class="p-4">
-    <div class="container">
-        <form action="{{ route('comic_books.store') }}" method="POST" class="border rounded p-3">
+    <div class="container w-50">
+        <form action="{{ route('comic_books.store') }}" method="POST" class="border border-primary border-4 rounded p-3 bg-white">
             @csrf
             <div class="mb-3">
                 <label class="form-label">Titolo</label>
@@ -36,7 +36,7 @@
 
             <div class="mb-3">
                 <label for="basic-url" class="form-label">Data Uscita</label>
-                <input type="text" class="form-control" placeholder="Data" name="sale_date" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <input type="date" class="form-control" placeholder="Data" name="sale_date" aria-label="Recipient's username" aria-describedby="basic-addon2">
             </div>
 
             <div class="mb-3">

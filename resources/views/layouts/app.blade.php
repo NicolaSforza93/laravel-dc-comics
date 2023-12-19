@@ -21,10 +21,13 @@
 
     @include('partials.header')
 
-    <main class="bg-light">
+    @include('partials.jumbotron')
+
+    <main>
         @yield('content')
     </main>
-
+    
+    @include('partials.footer')
 </body>
 
 </html>

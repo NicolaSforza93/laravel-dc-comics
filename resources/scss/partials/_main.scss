@@ -1,0 +1,41 @@
+.jumbotron {
+    .container-fluid {
+        height: 200px;
+        background-size: cover;
+        background-position: top center;
+    }
+}
+
+.title {
+    background-color: #3880f1;
+    position: absolute;
+    top: -2%;
+    left: 13%;
+    color: white;
+}
+
+.show-comic-book {
+    figure {
+        top: -24%;
+        left: 4%;
+    }
+}
+
+main {
+    background-color: #1c1c1c;
+}
+
+ul,
+li,
+menu {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.card {
+    border: none;
+    background-color: transparent;
+}

@@ -2,9 +2,9 @@
 
 @section('content')
 
-<section class="p-4">
+<section class="py-5 position-relative">
     <div class="container">
-        <button type="button" class="btn btn-primary mb-3"><a href="{{ route('comic_books.create') }}" class="text-white text-decoration-none">Aggiungi fumetto <i class="fa-solid fa-plus"></i></a></button>
+        <h1 class="title text-uppercase">Current Series</h1>
         <div class="row row-gap-4">
             @forelse ($comic_books as $comic_book)
                 <div class="col-2">
@@ -12,7 +12,7 @@
                         <img src="{{ $comic_book->thumb }}" class="card-img-top" alt="">
                         <div class="card-body px-0">
                             <h6 class="text-uppercase text-black">
-                                <a href="{{ route('comic_books.show', $comic_book) }}" class="text-black text-decoration-none">{{ $comic_book->title }}</a>
+                                <a href="{{ route('comic_books.show', $comic_book->id) }}" class="text-white text-decoration-none">{{ $comic_book->series }}</a>
                             </h6>
                         </div>
                     </div>  
@@ -21,6 +21,7 @@
                 <p>Nessun fumetto trovato</p>
             @endforelse
         </div>
+        <button type="button" class="btn btn-primary mb-3"><a href="{{ route('comic_books.create') }}" class="text-white text-decoration-none">Aggiungi fumetto <i class="fa-solid fa-plus"></i></a></button>
     </div>
 </section>
 
