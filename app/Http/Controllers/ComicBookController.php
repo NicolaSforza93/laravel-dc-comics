@@ -80,8 +80,10 @@ class ComicBookController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(ComicBook $comicBook)
+    public function destroy(ComicBook $comic_book)
     {
-        //
+        $comic_book->delete();
+
+        return redirect()->route('comic_books.index');
     }
 }

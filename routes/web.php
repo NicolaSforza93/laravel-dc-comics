@@ -37,3 +37,6 @@ Route::get('/comic_books/{comic_book}/edit', [ComicBookController::class, 'edit'
 
 Route::put('/comic_books/{comic_book}', [ComicBookController::class, 'update'])
     ->name('comic_books.update');
+
+Route::delete('/comic_books/{comic_book}', [ComicBookController::class, 'destroy'])
+    ->name('comic_books.destroy');

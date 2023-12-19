@@ -8,7 +8,19 @@
         <div class="row row-gap-4">
             @forelse ($comic_books as $comic_book)
                 <div class="col-2">
-                    <div class="card h-100">
+                    <div class="card h-100 position-relative"> 
+                        <div class="delete position-absolute">
+                            <form action="{{ route('comic_books.destroy', $comic_book->id) }}" method="POST">
+    
+                                @csrf
+                            
+                                @method('DELETE')
+        
+                                <button type="submit">
+                                    <i class="fa-solid fa-circle-minus"></i>
+                                </button>
+                            </form>
+                        </div>                   
                         <img src="{{ $comic_book->thumb }}" class="card-img-top" alt="">
                         <div class="card-body px-0">
                             <h6 class="text-uppercase text-black">
