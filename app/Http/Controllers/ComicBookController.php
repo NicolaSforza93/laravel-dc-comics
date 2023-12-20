@@ -6,6 +6,7 @@ use App\Models\ComicBook;
 use App\Http\Requests\StoreComicBookRequest;
 use App\Http\Requests\UpdateComicBookRequest;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class ComicBookController extends Controller
 {
@@ -29,9 +30,11 @@ class ComicBookController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreComicBookRequest $request)
     {
-        $data = $request->all();
+
+        // $data = $request->all();
+        $data = $request->validated();
         // dd($data);
         // $new_comic_book = new ComicBook();
 
@@ -71,7 +74,21 @@ class ComicBookController extends Controller
      */
     public function update(Request $request, ComicBook $comic_book)
     {
+        $request->validate([
+            'title' => 'required|max:100|min:5',
+            'description' => 'nullable|min:20',
+            'thumb' => 'required|max:255|url',
+            'price' => 'required|numeric',
+            'series' => 'required|max:100|min:3',
+            'sale_date' => 'required|date',
+            'type' => [
+                'required',
+                Rule::in(['comic book', 'graphic novel'])
+            ],
+        ]);
+
         $data = $request->all();
+
         $comic_book->update($data);
 
         return redirect()->route('comic_books.show', $comic_book->id);

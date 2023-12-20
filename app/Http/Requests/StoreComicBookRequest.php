@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class StoreComicBookRequest extends FormRequest
 {
@@ -11,7 +12,7 @@ class StoreComicBookRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +23,16 @@ class StoreComicBookRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'title' => 'required|max:100|min:5',
+            'description' => 'nullable|min:20',
+            'thumb' => 'required|max:255|url',
+            'price' => 'required|numeric',
+            'series' => 'required|max:100|min:3',
+            'sale_date' => 'required|date',
+            'type' => [
+                'required',
+                Rule::in(['comic book', 'graphic novel'])
+            ],
         ];
     }
 }

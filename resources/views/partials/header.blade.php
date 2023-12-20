@@ -7,7 +7,7 @@
                 </a>
             </div>
     
-            <ul class="menu d-flex gap-4 mb-0">
+            <ul class="nav-menu d-flex gap-4 mb-0">
                 <li class="menu-item">
                     <a href="#" class="text-uppercase text-decoration-none fw-medium">Characters</a>
                 </li>
