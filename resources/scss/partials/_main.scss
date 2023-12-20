@@ -1,3 +1,15 @@
+.active {
+    a {
+        color: #3880f1;
+    }
+}
+
+nav {
+    a {
+        color: black;
+    }
+}
+
 .jumbotron {
     .container-fluid {
         height: 200px;
@@ -13,11 +25,11 @@
     padding: 2px;
 }
 
-.title {
+.title-series {
     background-color: #3880f1;
     position: absolute;
-    top: -2%;
-    left: 13%;
+    top: -3%;
+    left: 3%;
     color: white;
 }
 
@@ -47,9 +59,18 @@ a {
     background-color: transparent;
 }
 
-.form-create {
-    background-image: url('https://img.freepik.com/premium-vector/retro-magazine-cover-vintage-comic-book-vector-template-book-cover-comic-cartoon-page-illustration_53562-4842.jpg?size=626&ext=jpg');
-    background-size: cover;
+.add-btn {
+    border: none;
+    background-color: #3880f1;
+    padding: 7px 22px;
+    font-size: 13px;
+}
+
+.section-create {
+    background-image: url('https://i.pinimg.com/736x/5f/9c/2d/5f9c2d7fb254e8490c08ec7cd14e88da.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .delete {
