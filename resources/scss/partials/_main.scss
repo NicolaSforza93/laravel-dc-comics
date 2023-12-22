@@ -66,24 +66,18 @@ a {
     font-size: 13px;
 }
 
-.section-create {
-    background-image: url('https://i.pinimg.com/736x/5f/9c/2d/5f9c2d7fb254e8490c08ec7cd14e88da.jpg');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+.overlay {
+    filter: opacity(15%);
 }
 
-.delete {
+.btn-delete {
     right: 3px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
 
-    button {
-        border: none;
-        background-color: transparent;
-        padding: 0;
-
-        i {
-            color: red;
-            font-size: 17px;
-        }
+    i {
+        color: red;
+        font-size: 17px;
     }
 }
